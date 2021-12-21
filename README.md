@@ -8,8 +8,11 @@ Takes those cursed usernames you see on social networks and lets them be accessi
 
 The project basically relies on a simple lookup table, generated from the [Lingojam TwitterFonts website](https://lingojam.com/TwitterFonts) but reverses it to map them back to their "normal" counterparts. Many of the characters seldom have use outside of decorative text, so something like semantic markup designating it as an author label rather than a math formula could perhaps allow screen readers to do the heavy lifting for users. I'm sure my lookup table is currently missing entries, and some are hard to map, but hey, don't let perfect be the enemy of good!
 
+Inspired by [a fun convo](https://github.com/christianselig/AccessibleAuthorLabel/tree/main) on Twitter
+
 # Usage
 
 Just change instances of `UILabel` where you want this to operate to `AccessibleAuthorLabel` and include `AccessibleAuthorLabel.swift` and `mapping.plist` into your project.
 
 If you do truly want to use this, there's probably some optimizations worth making around reading in plists files on each label read, as well as string mapping, but again, proof of concept!
+
