@@ -21,7 +21,4 @@ class AccessibleAuthorLabel: UILabel {
             super.accessibilityLabel = newValue
         }
     }
-    
-    
 }
-
