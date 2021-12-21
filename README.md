@@ -10,9 +10,12 @@ The project basically relies on a simple lookup table, generated from the [Lingo
 
 Inspired by [a fun convo](https://twitter.com/ChristianSelig/status/1473373617652183042) on Twitter
 
+
 # Usage
 
-Just change instances of `UILabel` where you want this to operate to `AccessibleAuthorLabel` and include `AccessibleAuthorLabel.swift` and `mapping.plist` into your project.
-
-If you do truly want to use this, there's probably some optimizations worth making around reading in plists files on each label read, as well as string mapping, but again, proof of concept!
+1. Go to File > Add Packages in Xcode, then enter the URL <http://github.com/christianselig/AccessibleAuthorLabel>.
+2. Add `import AccessibleAuthorLabel` wherever you want to use accessible labels.
+3. Change instances of `UILabel` to `AccessibleLabel` as appropriate.
+4. Buy Apollo Ultra.
+5. Wait, what?
 
