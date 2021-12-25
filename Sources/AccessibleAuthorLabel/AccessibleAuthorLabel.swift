@@ -16,15 +16,17 @@ public class AccessibleLabel: UILabel {
         guard let mapping = NSDictionary(contentsOf: plistURL) as? [String: String] else { return [:] }
         return mapping
     }()
+    
+    private var _accessibilityLabel: String?
 
-    /// Automatically converts our text into something easier for VoiceOver to read.
+    /// If accessibilityLabel is not set, converts our text into something easier for VoiceOver to read.
     override public var accessibilityLabel: String? {
         get {
-            text?.map { Self.characterMapping[$0.lowercased()] ?? "" }.joined()
+            _accessibilityLabel ?? text?.map { Self.characterMapping[$0.lowercased()] ?? "" }.joined()
         }
 
         set {
-            super.accessibilityLabel = newValue
+            _accessibilityLabel = newValue
         }
     }
 }
